@@ -175,3 +175,46 @@ $("#play-again").addEventListener("click", async ()=>{
 });
 $("#go-home").addEventListener("click", ()=> location.reload());
 const [numQuestions, setNumQuestions] = useState(10); // default 10
+import React, { useState } from "react";
+
+function CreateGame({ startGame }) {
+  const [playerName, setPlayerName] = useState("");
+  const [numQuestions, setNumQuestions] = useState(10); // default number
+
+  const handleCreateGame = () => {
+    startGame(playerName, numQuestions); // now sending both name + question count
+  };
+
+  return (
+    <div>
+      <h1>Create Game</h1>
+
+      {/* Player Name Input */}
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={playerName}
+        onChange={(e) => setPlayerName(e.target.value)}
+      />
+
+      {/* New Dropdown for Number of Questions */}
+      <label htmlFor="numQuestions">How many questions do you want?</label>
+      <select
+        id="numQuestions"
+        value={numQuestions}
+        onChange={(e) => setNumQuestions(Number(e.target.value))}
+      >
+        {[...Array(100).keys()].map((i) => (
+          <option key={i + 1} value={i + 1}>
+            {i + 1}
+          </option>
+        ))}
+      </select>
+
+      {/* Start Button */}
+      <button onClick={handleCreateGame}>Start Game</button>
+    </div>
+  );
+}
+
+export default CreateGame;
