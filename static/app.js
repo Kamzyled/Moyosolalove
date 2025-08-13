@@ -174,3 +174,4 @@ $("#play-again").addEventListener("click", async ()=>{
   show("p2");
 });
 $("#go-home").addEventListener("click", ()=> location.reload());
+const [numQuestions, setNumQuestions] = useState(10); // default 10
