@@ -31,8 +31,6 @@ def new_code():
 
 # Default question set (Player1 answers truth, Player2 guesses)
 DEFAULT_QUESTIONS = [
-    // src/data/questions.js
-export const allQuestions = [
   "What’s the first thing you noticed about me?",
   "If we could go anywhere together, where would you take me?",
   "What song reminds you of me?",
@@ -132,7 +130,7 @@ export const allQuestions = [
   "Which smell would you choose to be ‘our scent’?",
   "What’s the best compliment I’ve ever given you?",
   "Would you rather watch fireworks or stargaze with me?"
-];
+
 ]
 
 # ---------------- Routes ----------------
