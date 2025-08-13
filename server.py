@@ -133,7 +133,7 @@ export const allQuestions = [
   "What’s the best compliment I’ve ever given you?",
   "Would you rather watch fireworks or stargaze with me?"
 ];
-
+]
 
 # ---------------- Routes ----------------
 @app.route("/")
